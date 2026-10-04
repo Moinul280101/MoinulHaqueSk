@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Md Moinul Haque Sk | Data Analyst Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f5f8;--panel:#fff;--ink:#14212b;--mute:#52606d;--line:#d5dde5;--accent:#0f766e;--hi:#e08a00;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e161d;--panel:#16212b;--ink:#e8eef3;--mute:#9fb0be;--line:#2a3945;--accent:#3cc2b3;--hi:#f2a62b}}
+:root[data-theme="dark"]{--bg:#0e161d;--panel:#16212b;--ink:#e8eef3;--mute:#9fb0be;--line:#2a3945;--accent:#3cc2b3;--hi:#f2a62b}
+html{scroll-padding-top:70px;scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Source Sans 3",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--hi);outline-offset:2px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+#prog{position:fixed;top:0;left:0;height:4px;width:0;background:var(--hi);z-index:50}
+header.top{position:sticky;top:0;z-index:40;background:var(--bg);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:12px;padding-bottom:12px;gap:12px;flex-wrap:wrap}
+header.top b{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:1.1rem}
+nav{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+nav a{color:var(--ink);text-decoration:none;font-weight:600}
+nav a.on,nav a:hover{color:var(--accent)}
+.ic{background:none;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:6px 10px;cursor:pointer;font:inherit}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;padding:56px 0 64px}
+.hero h1{font-size:clamp(2.6rem,7vw,4.6rem);font-weight:800;letter-spacing:-.02em}
+.role{font-size:1.25rem;font-weight:600;color:var(--accent);min-height:1.9em;margin-top:14px}
+.role::after{content:"";display:inline-block;width:2px;height:1.1em;background:var(--hi);margin-left:3px;vertical-align:-3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.hero p{color:var(--mute);max-width:46ch;margin:10px 0 24px}
+.btn{display:inline-block;padding:10px 18px;border-radius:8px;font:600 1rem "Source Sans 3",system-ui,sans-serif;text-decoration:none;border:2px solid var(--accent);margin:0 8px 8px 0;cursor:pointer;background:none;color:var(--accent)}
+.btn.p{background:var(--accent);color:var(--bg)}
+.btn:hover{transform:translateY(-2px)}
+.btn{transition:transform .15s}
+.chart{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;margin:0}
+.chart figcaption{color:var(--mute);font-size:.9rem;margin-top:8px}
+.chart svg{width:100%;height:auto;display:block}
+.bar{fill:var(--line);transform-origin:bottom;transform-box:fill-box;cursor:pointer;transition:fill .2s}
+.bar:hover,.bar.h{fill:var(--hi)}
+@media (prefers-reduced-motion:no-preference){.bar{animation:grow .9s ease-out both}@keyframes grow{from{transform:scaleY(0)}}}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;padding-bottom:48px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px}
+.stat b{display:block;font:800 2rem "Bricolage Grotesque",system-ui,sans-serif;color:var(--accent)}
+.stat span{color:var(--mute);font-size:.95rem}
+section{padding:48px 0;border-top:1px solid var(--line)}
+section>h2{font-size:2rem;margin-bottom:22px}
+.about{max-width:68ch}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.sk{--c:var(--accent);background:var(--panel);border:1px solid var(--line);border-top:5px solid var(--c);border-radius:12px;padding:18px;transition:transform .2s,box-shadow .2s,border-color .2s}
+.sk:hover,.sk.hl{transform:translateY(-4px);box-shadow:0 10px 24px rgba(0,0,0,.12);border-color:var(--c)}
+.sk .top2{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.sk .ico{width:42px;height:42px;border-radius:10px;background:var(--c);color:#fff;display:grid;place-items:center;font:800 1.2rem "Bricolage Grotesque",system-ui,sans-serif;flex:none}
+.sk h3{font-size:1.2rem}
+.tg{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.tg span{font-size:.85rem;font-weight:600;border:1px solid var(--line);border-radius:14px;padding:2px 10px;color:var(--mute)}
+.sk .on-fk{margin:0;font-size:.95rem;color:var(--mute);border-top:1px dashed var(--line);padding-top:10px}
+.sk .on-fk b{color:var(--c)}
+.flow{margin-top:28px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px}
+.flow h3{font-size:1.25rem;margin-bottom:4px}
+.flow>p{margin:0 0 16px;color:var(--mute)}
+.steps{display:flex;flex-wrap:wrap;gap:8px;align-items:stretch}
+.step{flex:1 1 130px;text-align:left;background:var(--bg);border:2px solid var(--line);border-radius:10px;padding:10px 12px;cursor:pointer;color:var(--ink);font:inherit;position:relative}
+.step b{display:block;font:800 1.15rem "Bricolage Grotesque",system-ui,sans-serif;color:var(--c,var(--accent))}
+.step span{font-size:.88rem;color:var(--mute)}
+.step.act,.step:hover{border-color:var(--c,var(--accent))}
+.step.act{background:var(--panel)}
+#flowInfo{margin:14px 0 0;padding:12px 14px;border-left:4px solid var(--hi);background:var(--bg);border-radius:0 8px 8px 0;min-height:3.4em}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.chip{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:20px;padding:6px 16px;cursor:pointer;font:600 .95rem "Source Sans 3",system-ui,sans-serif}
+.chip[aria-pressed="true"]{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+.proj{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:24px;margin-bottom:20px}
+.proj[hidden]{display:none}
+.proj h3{font-size:1.45rem}
+.tools{color:var(--accent);font-weight:600;margin:6px 0 10px}
+.acts{margin-top:14px}
+.more{display:none;margin-top:12px;border-top:1px solid var(--line);padding-top:12px}
+.proj.open .more{display:block}
+.more ul{margin:6px 0 0;padding-left:20px}
+.more code{background:var(--bg);padding:1px 6px;border-radius:4px;font-size:.92rem}
+.contact p{margin:6px 0}
+#toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,30px);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:8px;opacity:0;pointer-events:none;transition:.25s;z-index:60;max-width:90vw;text-align:center}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+#top{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));display:none;z-index:45}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.meter i{transition:none}.role::after{animation:none}}
+footer{padding:28px 0 36px;color:var(--mute);font-size:.9rem}
+@media (max-width:720px){.hero{grid-template-columns:1fr;padding-top:28px}}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+<header class="top"><div class="wrap">
+  <b>MD MOINUL HAQUE SK</b>
+  <nav id="nav"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+  <button class="ic" id="theme" aria-label="Toggle dark mode">Theme</button></nav>
+</div></header>
+
+<main class="wrap">
+<div class="hero">
+  <div>
+    <h1>I turn raw data into decisions.</h1>
+    <div class="role" id="role" aria-live="off"></div>
+    <p>B.Tech in Computer Science (2025). I use SQL, Python, Power BI and Excel to find what drives sales, costs and customer behaviour.</p>
+    <a class="btn p" href="#projects">View projects</a>
+    <a class="btn" id="resumeBtn" href="#" target="_blank" rel="noopener">Download resume</a>
+  </div>
+  <figure class="chart">
+    <svg viewBox="0 0 300 170" role="img" aria-label="Bar chart; hover a bar to highlight it">
+      <line x1="10" y1="150" x2="290" y2="150" stroke="var(--line)" stroke-width="2"/>
+      <rect class="bar" x="20" y="90" width="30" height="60" rx="3" style="animation-delay:.05s"/>
+      <rect class="bar" x="65" y="70" width="30" height="80" rx="3" style="animation-delay:.15s"/>
+      <rect class="bar" x="110" y="100" width="30" height="50" rx="3" style="animation-delay:.25s"/>
+      <rect class="bar h" x="155" y="20" width="30" height="130" rx="3" style="animation-delay:.35s"/>
+      <rect class="bar" x="200" y="80" width="30" height="70" rx="3" style="animation-delay:.45s"/>
+      <rect class="bar" x="245" y="110" width="30" height="40" rx="3" style="animation-delay:.55s"/>
+    </svg>
+    <figcaption>Every data tells a story - you just need to know how to read it.</figcaption>
+  </figure>
+</div>
+
+<div class="stats">
+  <div class="stat rv"><b data-n="54966">0</b><span>patient records analysed</span></div>
+  <div class="stat rv"><b data-n="13754">0</b><span>e-commerce rows cleaned</span></div>
+  <div class="stat rv"><b data-n="8523">0</b><span>grocery items analysed</span></div>
+  <div class="stat rv"><b data-n="3">0</b><span>end-to-end projects</span></div>
+</div>
+
+<section id="about" class="rv">
+  <h2>About me</h2>
+  <p class="about">I finished my B.Tech in Computer Science and Engineering at Pailan College of Management and Technology (MAKAUT) in 2025. I like questions that start with "why did this number change?" and end with a clear chart and a recommendation. I am looking for Data Analyst, Business Analyst and MIS Executive roles.</p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills rv">
+    <div class="sk" data-skill="excel" style="--c:#1d8a4e"><div class="top2"><div class="ico">X</div><h3>Advanced Excel</h3></div>
+      <div class="tg"><span>Pivot tables</span><span>XLOOKUP</span><span>VLOOKUP</span><span>INDEX-MATCH</span><span>Power Query</span></div>
+      <p class="on-fk"><b>On Flipkart:</b> pivot tables and an Excel dashboard in Analysis.xlsx.</p></div>
+    <div class="sk" data-skill="sql" style="--c:#2b6cb0"><div class="top2"><div class="ico">SQL</div><h3>SQL</h3></div>
+      <div class="tg"><span>MySQL</span><span>Joins</span><span>Aggregations</span><span>Window functions</span></div>
+      <p class="on-fk"><b>On Flipkart:</b> business questions answered in queries.sql.</p></div>
+    <div class="sk" data-skill="python" style="--c:#b8860b"><div class="top2"><div class="ico">Py</div><h3>Python</h3></div>
+      <div class="tg"><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span></div>
+      <p class="on-fk"><b>On Flipkart:</b> EDA notebook (EDA.ipynb) with pandas and seaborn.</p></div>
+    <div class="sk" data-skill="pbi" style="--c:#e08a00"><div class="top2"><div class="ico">BI</div><h3>Power BI</h3></div>
+      <div class="tg"><span>Data modelling</span><span>DAX</span><span>Dashboards</span></div>
+      <p class="on-fk"><b>On Flipkart:</b> interactive dashboard in dashboard.pbix.</p></div>
+  </div>
+
+  <div class="flow rv">
+    <h3>Flipkart E-commerce: how the skills fit together</h3>
+    <p>Tap a step to see what I did and which skill it used.</p>
+    <div class="steps" id="steps">
+      <button class="step act" data-info="I started with a Flipkart e-commerce dataset of 20,000 raw rows."><b>20,000</b><span>raw rows</span></button>
+      <button class="step" data-skill="excel" style="--c:#1d8a4e" data-info="Cleaned the data down to 13,754 rows (cleanData.csv), then built pivot tables and an Excel dashboard in Analysis.xlsx."><b>13,754</b><span>cleaned in Excel</span></button>
+      <button class="step" data-skill="sql" style="--c:#2b6cb0" data-info="Wrote SQL queries (queries.sql) to answer business questions on the cleaned data."><b>SQL</b><span>queries</span></button>
+      <button class="step" data-skill="python" style="--c:#b8860b" data-info="Explored patterns and distributions in EDA.ipynb using pandas and seaborn."><b>Python</b><span>EDA</span></button>
+      <button class="step" data-skill="pbi" style="--c:#e08a00" data-info="Pulled everything into an interactive Power BI dashboard (dashboard.pbix)."><b>Power BI</b><span>dashboard</span></button>
+    </div>
+    <p id="flowInfo" aria-live="polite">I started with a Flipkart e-commerce dataset of 20,000 raw rows.</p>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="chips" id="chips" role="group" aria-label="Filter projects by tool"></div>
+  <div id="list"></div>
+</section>
+
+<section id="contact" class="contact rv">
+  <h2>Contact</h2>
+  <p>Open to Data Analyst, Business Analyst and MIS roles.</p>
+  <p><a id="mail" href="#"></a> <button class="btn" id="copyMail" style="padding:4px 12px;margin-left:8px">Copy</button></p>
+  <p><a id="li" href="#" target="_blank" rel="noopener">LinkedIn</a> &nbsp; <a id="gh" href="#" target="_blank" rel="noopener">GitHub</a></p>
+</section>
+<footer>&copy; 2026 Md Moinul Haque Sk</footer>
+</main>
+
+<button class="btn p" id="top" aria-label="Back to top">Top</button>
+<div id="toast" role="status"></div>
+
+<script>
+/* ===== EDIT ONLY THIS BLOCK: paste your links between the quotes ===== */
+const CONFIG = {
+  resumeUrl:   "https://drive.google.com/file/d/14cgZDMJ1ISE9ysLKNAIKk0C-u8Jy5-vO/view?usp=drive_link",   // RESUME: link to your resume PDF (Google Drive share link, or "resume.pdf" if the file sits next to this page)
+  linkedinUrl: "https://www.linkedin.com/in/md-moinul-haque-sk1/ ",   // LINKEDIN: your full LinkedIn profile link
+  githubUrl:   "https://github.com/Moinul280101",   // GITHUB: your full GitHub profile link, e.g. https://github.com/username
+  email: "mdmoinulhaquesk885@gmail.com",
+  projects: [
+    { title:"Flipkart E-commerce Analysis", tools:["Excel","SQL","Python","Power BI"],
+      repoUrl:"https://github.com/Moinul280101/Flipcart_Ecommers_Analysis",      // GITHUB repo link for this project
+      downloadUrl:"https://drive.google.com/file/d/1P-m4NNwYrB0EXmgt19SoNgWo0Vl_m3Y1/view?usp=drive_link",  // PROJECT DOWNLOAD: link to a ZIP/file (Drive link or GitHub .zip). Empty = uses repo ZIP
+      question:"Which products, categories and customer groups drive the most revenue? Cleaned 20,000 raw rows down to 13,754.",
+      files:["cleanData.csv","Analysis.xlsx (pivot tables + dashboard)","queries.sql","EDA.ipynb","dashboard.pbix"], insights:[] },
+    { title:"Healthcare Admissions Analysis", tools:["Excel","SQL","Python","Power BI"],
+      repoUrl:"https://github.com/Moinul280101/Health_care_Analysis", downloadUrl:"https://drive.google.com/file/d/1EZg9vBA0QnHKUv0-tLwUnpn3A-mG1pWC/view?usp=drive_link ",
+      question:"What drives admissions and billing across 54,966 patient records?",
+      files:["Clean_healthcare_dataset.csv / .xlsx","QUARRIES.sql","EDA.ipynb","Dashboard.pbix"], insights:[] },
+    { title:"BlinkIT Grocery Sales Analysis", tools:["Excel"],
+      repoUrl:"https://docs.google.com/spreadsheets/d/1G9hFhKDA4eJYMmVIG8D0vHvFFk84KGO7/edit?usp=drive_link&ouid=101961196677716582625&rtpof=true&sd=true", downloadUrl:"https://docs.google.com/spreadsheets/d/1G9hFhKDA4eJYMmVIG8D0vHvFFk84KGO7/edit?usp=drive_link&ouid=101961196677716582625&rtpof=true&sd=true",
+      question:"How do item type, fat content and outlet type affect sales across 8,523 items and 10 outlets?",
+      files:["Excel workbook (raw data, pivot tables, dashboard)","Dashboard screenshot"], insights:[] }
+  ]
+};
+/* ===================================================================== */
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.remove('show'),2600)}
+function link(a,url,msg){if(url){a.href=url}else a.addEventListener('click',e=>{e.preventDefault();toast(msg)})}
+
+/* contact links */
+$('#mail').textContent=CONFIG.email;$('#mail').href='mailto:'+CONFIG.email;
+link($('#li'),CONFIG.linkedinUrl,"Add your LinkedIn link in CONFIG (linkedinUrl).");
+link($('#gh'),CONFIG.githubUrl,"Add your GitHub link in CONFIG (githubUrl).");
+link($('#resumeBtn'),CONFIG.resumeUrl,"Add your resume link in CONFIG (resumeUrl).");
+$('#copyMail').onclick=()=>{try{navigator.clipboard.writeText(CONFIG.email).then(()=>toast("Email copied"),()=>toast(CONFIG.email))}catch(e){toast(CONFIG.email)}};
+
+/* projects */
+const tools=["All",...new Set(CONFIG.projects.flatMap(p=>p.tools))];
+const list=$('#list');
+CONFIG.projects.forEach((p,i)=>{
+  const repoUrl=p.repoUrl||"";
+  const el=document.createElement('article');el.className='proj rv';el.dataset.tools=p.tools.join(',');
+  el.innerHTML=`<h3></h3><div class="tools"></div><p></p>
+  <div class="acts">
+    <a class="btn p v" href="#" target="_blank" rel="noopener">View on GitHub</a>
+    <a class="btn d" href="#" target="_blank" rel="noopener">Download ZIP</a>
+    <button class="btn c">Copy repo link</button>
+    <button class="btn t" aria-expanded="false">Details</button>
+  </div>
+  <div class="more"><b>What's inside</b><ul class="f"></ul><div class="ins"></div></div>`;
+  $('h3',el).textContent=p.title;$('.tools',el).textContent=p.tools.join(' · ');$('p',el).textContent=p.question;
+  p.files.forEach(f=>{const li=document.createElement('li');li.innerHTML='<code></code>';$('code',li).textContent=f;$('.f',el).append(li)});
+  $('.ins',el).innerHTML=p.insights.length?'<b>Key insights</b><ul>'+p.insights.map(x=>`<li>${x.replace(/</g,'&lt;')}</li>`).join('')+'</ul>':'<p style="color:var(--mute);margin:10px 0 0">Key insights: add them to this project in CONFIG.</p>';
+  const v=$('.v',el),d=$('.d',el);
+  link(v,repoUrl,"Add this project's GitHub link in CONFIG (repoUrl).");
+  const zip=p.downloadUrl||(/github\.com/.test(repoUrl)?repoUrl.replace(/\/$/,'')+'/archive/refs/heads/main.zip':"");
+  link(d,zip,"Add this project's download link in CONFIG (downloadUrl).");
+  $('.c',el).onclick=()=>{if(!repoUrl)return toast("Add this project's GitHub link in CONFIG (repoUrl).");try{navigator.clipboard.writeText(repoUrl).then(()=>toast("Repo link copied"),()=>toast(repoUrl))}catch(e){toast(repoUrl)}};
+  $('.t',el).onclick=e=>{const o=el.classList.toggle('open');e.target.setAttribute('aria-expanded',o);e.target.textContent=o?'Hide details':'Details'};
+  list.append(el);
+});
+const chips=$('#chips');
+tools.forEach((t,i)=>{const b=document.createElement('button');b.className='chip';b.textContent=t;b.setAttribute('aria-pressed',i===0);
+  b.onclick=()=>{$$('.chip').forEach(c=>c.setAttribute('aria-pressed',c===b));
+    $$('.proj').forEach(p=>p.hidden=!(t==='All'||p.dataset.tools.split(',').includes(t)))};chips.append(b)});
+
+/* typing roles */
+const roles=["Data Analyst","Business Analyst","MIS Executive"];let ri=0,ci=0,del=false;const rEl=$('#role');
+function type(){const w=roles[ri];
+  if(reduce){rEl.textContent=roles.join(' | ');return}
+  rEl.textContent=w.slice(0,ci);
+  if(!del&&ci===w.length){del=true;return setTimeout(type,1400)}
+  if(del&&ci===0){del=false;ri=(ri+1)%roles.length}
+  ci+=del?-1:1;setTimeout(type,del?45:90)}
+type();
+
+/* counters, skill meters, reveal */
+function count(el){const n=+el.dataset.n;if(reduce){el.textContent=n.toLocaleString('en-IN');return}
+  const s=performance.now();(function f(t){const k=Math.min((t-s)/1400,1);el.textContent=Math.round(n*(1-Math.pow(1-k,3))).toLocaleString('en-IN');if(k<1)requestAnimationFrame(f)})(s)}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const t=e.target;t.classList.add('in');
+  $$('[data-n]',t).forEach(count);io.unobserve(t)}),{threshold:.2});
+$$('.rv').forEach(x=>io.observe(x));
+
+/* scroll: progress bar, nav highlight, back to top */
+const secs=$$('section[id]'),links=$$('#nav a');
+addEventListener('scroll',()=>{const h=document.documentElement,max=h.scrollHeight-innerHeight;
+  $('#prog').style.width=(max>0?scrollY/max*100:0)+'%';$('#top').style.display=scrollY>500?'block':'none';
+  let cur='';secs.forEach(s=>{if(s.getBoundingClientRect().top<120)cur=s.id});
+  links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+cur))},{passive:true});
+$('#top').onclick=()=>scrollTo({top:0});
+
+
+/* skills flow */
+function pick(st){$$('.step').forEach(x=>x.classList.toggle('act',x===st));
+  $('#flowInfo').textContent=st.dataset.info;
+  $$('.sk').forEach(c=>c.classList.toggle('hl',!!st.dataset.skill&&c.dataset.skill===st.dataset.skill))}
+$$('.step').forEach(st=>{st.onclick=()=>pick(st);st.onmouseenter=()=>pick(st);st.onfocus=()=>pick(st)});
+
+/* theme toggle */
+$('#theme').onclick=()=>{const r=document.documentElement;
+  const dark=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;
+  r.dataset.theme=dark?'light':'dark'};
+</script>
+</body>
+</html>
